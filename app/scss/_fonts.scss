@@ -15,3 +15,21 @@
        url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Italic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay-Bold.woff') format('woff');
+  font-display: swap;
+}
