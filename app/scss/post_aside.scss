@@ -1,0 +1,296 @@
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'vars';
+@import 'global';
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.article {
+  max-width: 68%;
+  margin-bottom: 35px;
+  margin-right: 45px;
+  padding-left: 80px;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 55px;
+  }
+
+  &__blockquote {
+    padding: 0 20px;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+}
+
+.aside {
+
+  &__inner {
+    position: sticky;
+    top: -180px;
+    margin-bottom: 105px;
+
+    @media (max-width: 992px) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.about {
+  margin-bottom: 60px;
+
+  @media (max-width: 992px) {
+    max-width: 330px;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 576px) {
+    margin-right: 0;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+}
+
+.top-posts {
+
+  @media (max-width: 992px) {
+    max-width: 30%;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 576px) {
+    margin-right: 0;
+  }
+
+  &__list {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    margin-left: 28px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      content: '\2022';
+      color: $subtitle;
+      font-weight: 900;
+      font-size: 16px;
+      z-index: -1;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
+.spot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  color: $white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 992px) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #b4ac9e, $alpha: 0.85)
+  }
+
+  &__title {
+    z-index: 1;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    z-index: 1;
+    font-size: 14px;
+  }
+}
+
+
+.hints {
+  padding: 70px 0;
+  background-color: #f5f5f5;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+
+    @media (max-width: 768px) {
+      column-gap: 20px;
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    @media (max-width: 576px) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.comments {
+  padding: 70px 0 30px;
+
+  @media (max-width: 576px) {
+    padding: 50px 0 10px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__avatar {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    margin-right: 35px;
+    text-align: center;
+    border-radius: 50%;
+
+    &--bg {
+      background-color: #cae5e0;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__initials {
+    display: block;
+    margin-top: 19px;
+    font-size: 34px;
+    line-height: 1;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: $white;
+  }
+
+  &__author {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__send {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 35px;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 15px;
+      font-size: 12px;
+    }
+  }
+}

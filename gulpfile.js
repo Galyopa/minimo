@@ -25,9 +25,9 @@ function svgSprites() {
     }))
     .pipe(cheerio({
       run: ($) => {
-        $("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
-        $("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
-        $("[style]").removeAttr("style"); // убираем внутренние стили для иконок
+        $("[fill]").removeAttr("fill"); 
+        $("[stroke]").removeAttr("stroke"); 
+        $("[style]").removeAttr("style"); 
       },
       parserOptions: { xmlMode: true },
     })
@@ -54,9 +54,8 @@ function browsersync() {
 }
 
 function styles() {
-  return src('app/scss/*.scss') // берет фаил 
-    .pipe(scss({ outputStyle: 'compressed' }))  // стиль преобразовния
-    // .pipe(concat()) //переименовывавет фаил
+  return src('app/scss/*.scss') 
+    .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(rename({
       suffix: '.min'
     }))
@@ -64,7 +63,7 @@ function styles() {
       overrideBrowserslist: ['last 10 versions'],
       grid: true
     }))
-    .pipe(dest('app/css')) //директория сохранения файла
+    .pipe(dest('app/css')) 
     .pipe(browserSync.stream())
 }
 

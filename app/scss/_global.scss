@@ -31,12 +31,16 @@ button {
 }
 
 .subtitle {
+  margin-bottom: 30px;
   display: inline-block;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   color: $subtitle;
   text-transform: uppercase;
-  margin-bottom: 30px;
+
+  &--margin {
+    margin-bottom: 15px;
+  }
 
   &--link {
     &:hover {
@@ -51,9 +55,9 @@ button {
 }
 
 .title {
+  margin-bottom: 35px;
   font-size: 30px;
   line-height: 1;
-  margin-bottom: 35px;
 
   @media (max-width: 992px) {
     font-size: 26px;
@@ -207,13 +211,14 @@ button {
 
 .post-card {
   &__img {
-    width: 100%;
+    margin-bottom: 30px;
     object-fit: contain;
     object-position: center;
-    margin-bottom: 30px;
   }
 
   &__link {
+    display: block;
+    
     &:hover {
       color: $accent;
     }
@@ -251,7 +256,6 @@ button {
   padding: 45px 0;
   color: $black;
   background-color: #f0f0f0;
-
 
   &__inner {
     display: flex;
@@ -292,7 +296,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
 
   &--share {
     justify-content: flex-end;

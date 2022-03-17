@@ -55,9 +55,8 @@
 
 .subscribe {
   padding: 75px 0;
-  background-color: #f0f0f0;
   margin-bottom: 100px;
-
+  background-color: #f0f0f0;
 
   &__form {
     max-width: 430px;
@@ -69,8 +68,8 @@
   &__label {
     display: block;
     width: 100%;
-    letter-spacing: 1px;
     margin-bottom: 80px;
+    letter-spacing: 1px;
   }
 
   &__input {
@@ -87,8 +86,8 @@
   &__btn {
     position: absolute;
     margin-top: 4px;
-    padding-top: 6px;
     margin-left: -33px;
+    padding-top: 6px;
     fill: $basic;
 
     &:hover {
